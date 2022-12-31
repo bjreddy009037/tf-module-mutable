@@ -4,3 +4,7 @@ variable "NODE_TYPE" {}
 variable "VPC_ID" {}
 variable "VPC_CIDR" {}
 variable "SUBNET_IDS" {}
+variable "ONDEMAND_INSTANCE_COUNT" {}
+variable "SPOT_INSTANCE_COUNT" {}
+variable "PORT" {}
+variable "WORKSTATION_IP" {}

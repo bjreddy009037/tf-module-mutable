@@ -4,9 +4,9 @@ resource "aws_security_group" "main" {
   vpc_id      = var.VPC_ID
 
   ingress {
-    description = "RABBITMQ"
-    from_port   = 5672
-    to_port     = 5672
+    description = "app"
+    from_port   = var.PORT
+    to_port     = var.PORT
     protocol    = "tcp"
     cidr_blocks = [var.VPC_CIDR]
 
@@ -16,7 +16,7 @@ resource "aws_security_group" "main" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = [var.VPC_CIDR]
+    cidr_blocks = [var.VPC_CIDR, var.WORKSTATION_IP]
 
   }
 
